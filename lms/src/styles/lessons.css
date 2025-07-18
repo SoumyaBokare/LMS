@@ -1,0 +1,103 @@
+/* lessons.css */
+
+body {
+    font-family: 'Sora', sans-serif !important;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.lessons-page {
+    display: flex;
+    flex-direction: column;
+    margin-left: 240px; /* Adjust for sidebar */
+    padding: 30px;
+    background-color: #f5f5f5;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.lessons-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.lesson-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.lesson-item:hover {
+    transform: scale(1.03);
+}
+
+.lesson-item h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.lesson-item p {
+    font-size: 16px;
+    color: #777;
+}
+
+.lesson-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background-color: #4caf50;
+    border-radius: 8px 8px 0 0;
+}
+
+.lesson-item.completed::before {
+    background-color: #4caf50;
+}
+
+.lesson-item.in-progress::before {
+    background-color: #ff6b6b;
+}
+
+.lesson-item.upcoming::before {
+    background-color: #ffc107;
+}
+
+/* Progress Bar */
+.lesson-progress-bar {
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.lesson-progress {
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .lessons-page {
+        margin-left: 0;
+        padding: 20px;
+    }
+}

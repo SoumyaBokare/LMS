@@ -1,0 +1,177 @@
+/* General Layout */
+.dashboard {
+    display: flex;
+    height: 100vh;
+    overflow: hidden; /* Prevents the entire page from scrolling, ensures individual sections scroll */
+}
+
+.sidebar {
+    width: 240px;
+    background: linear-gradient(90deg, #3d1818 0%, #ed1c24 100%) !important;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto; /* Allows scrolling if the sidebar content exceeds the height */
+}
+
+.sidebar-logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar-logo img {
+    max-width: 100px;
+    cursor: pointer;
+}
+
+.sidebar-menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar-menu li {
+    padding: 15px 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.sidebar-menu a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.sidebar-menu li:hover {
+    color: #f5f5f5;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.sidebar-menu li.active {
+    background-color: #f0f0f0; 
+    margin-top: 10px;
+    border-radius: 10px;
+    font-weight: bold; /* Make the text bold */
+    text-align: center;
+}
+
+.sidebar-menu li.active a {
+    color: #3d1818; /* Change text color */
+}
+
+.logout-button {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.logout-button button {
+    padding: 10px 20px;
+    border: 2px solid #ed1c24;
+    background-color: #3d1818 !important;
+    transition: background-color .3s, color .3s, box-shadow .3s;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.logout-button button:hover {
+    background-color: #ed1c24 !important;
+    color: white !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.logout-button:active {
+    background-color: #3d1818;
+    color: #ed1c24;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2); /* Inset shadow on active */
+}
+
+/* Profile Page Content */
+.profile-page {
+    margin-left: 260px; /* Adjusted to ensure content doesn't overlap with the sidebar */
+    padding: 20px;
+    flex-grow: 1;
+    background-color: #f5f5f5;
+    overflow-y: auto; /* Ensures scrolling within the profile content */
+    height: 100vh; /* Matches the height of the viewport */
+}
+
+.profile-page h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Make the card take full width of its container */
+}
+
+.messages.card {
+    max-height: 300px; /* Set a maximum height for the messages card */
+    overflow-y: auto; /* Add a scrollbar if the content overflows */
+}
+
+.announcement-item {
+    margin-bottom: 10px;
+}
+
+.announcement-date {
+    color: #888;
+    font-size: 14px;
+}
+
+.forums.card {
+    max-height: 400px; /* Set a maximum height for the forums card */
+    overflow-y: auto; /* Add a scrollbar if the content overflows */
+}
+
+.forum-messages {
+    max-height: 300px; /* Set a maximum height for the forum messages */
+    overflow-y: auto; /* Add a scrollbar if the content overflows */
+    margin-bottom: 10px;
+}
+
+.forum-message {
+    margin-bottom: 10px;
+}
+
+.forum-date {
+    color: #888;
+    font-size: 12px;
+}
+
+.forum-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.forum-input input,
+.forum-input textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.forum-input button {
+    padding: 10px;
+    background-color: #3d1818;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color .3s, color .3s, box-shadow .3s;
+}
+
+.forum-input button:hover {
+    background-color: #ed1c24;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

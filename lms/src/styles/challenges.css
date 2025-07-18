@@ -1,0 +1,135 @@
+/* General Page Layout */
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+    font-family: 'Sora', sans-serif;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px; /* Fixed width for the sidebar */
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Keep it fixed so it doesn’t scroll with the content */
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+.sidebar-logo {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.sidebar-logo img {
+    max-width: 100px;
+    cursor: pointer;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-menu li {
+    margin-bottom: 20px;
+}
+
+.sidebar-menu li a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.sidebar-menu li a:hover, .sidebar-menu li a.active {
+    color: #3498db;
+}
+
+.logout-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.logout-button button {
+    background-color: #e74c3c;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button button:hover {
+    background-color: #c0392b;
+}
+
+/* Main Content Styling */
+.dashboard-content,
+.challenges-page {
+    flex-grow: 1;
+    padding: 40px;
+    margin-left: 270px; /* Add a margin-left to push the content away from the sidebar */
+    background-color: #f4f4f4;
+    overflow-y: auto;
+}
+
+.dashboard-content h1,
+.challenges-page h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #34495e;
+}
+
+/* Challenges Page Styling */
+.challenge-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.challenge-item h2 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.challenge-item p {
+    color: #7f8c8d;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.challenge-item p strong {
+    color: #34495e;
+    font-weight: 600;
+}
+
+.challenge-item ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .dashboard-content,
+    .challenges-page {
+        margin-left: 220px; /* Adjust based on the sidebar width */
+    }
+}
